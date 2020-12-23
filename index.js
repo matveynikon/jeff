@@ -13,7 +13,6 @@ async function start() {
   });  
   for(var k = 1; k < 2000000; k++){
     const page = await browser.newPage();
-    page.setDefaultNavigationTimeout(0);
     await page.waitFor(100000)
     await page.goto(url);
     await page.setViewport({ width: 1000, height: 900});
