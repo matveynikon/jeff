@@ -11,10 +11,10 @@ async function start() {
   const browser = await puppeteer.launch({
     args: ['--no-sandbox']
   });  
-  for(var k = 1; k < 200; k++){
+  for(var k = 1; k < 2000000; k++){
     const page = await browser.newPage();
     page.setDefaultNavigationTimeout(0);
-    await page.waitFor(20000)
+    await page.waitFor(100000)
     await page.goto(url);
     await page.setViewport({ width: 1000, height: 900});
     await page.waitFor(15000);
